@@ -1,9 +1,9 @@
 const primaryReducer = (state = [], action) => {
   switch  (action.type) {
-    case 'SET_TABLES':
+    case 'SET_TABLE':
       return action.payload;
     
-    case 'CLEAR_TABLES':
+    case 'CLEAR_TABLE':
       return [];
     
     default:
