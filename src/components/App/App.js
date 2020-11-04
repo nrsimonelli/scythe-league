@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {connect} from 'react-redux';
+import './App.css';
+import Home from '../Home/Home';
+
+class App extends Component {
+  componentDidMount () {
+    console.log('app mounted');
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className='theme'>
+          
+          <Switch>
+            {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
+            <Redirect exact from="/" to="/home" />
+
+            <Route
+              exact
+              path="/home"
+              component={Home}
+            />
+            {/* If none of the other routes matched, we will show a 404. */}
+            <Route render={() => <h1>404</h1>} />
+          </Switch>
+        </div>
+      </Router>
+  )}
 }
 
-export default App;
+export default connect()(App);
+
