@@ -1,5 +1,6 @@
 import { all } from 'redux-saga/effects';
-import primarySaga from './primarySaga';
+import leagueSaga from './leagueSaga';
+import playerSaga from './playerSaga';
 
 
 // rootSaga is the primary saga.
@@ -11,6 +12,7 @@ import primarySaga from './primarySaga';
 // and login triggers setting the user
 export default function* rootSaga() {
   yield all([
-    primarySaga(),
+    playerSaga(),
+    leagueSaga(),
   ]);
 }
