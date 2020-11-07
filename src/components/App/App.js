@@ -11,6 +11,7 @@ import './App.css';
 import Home from '../Home/Home';
 import Table from '../Table/Table';
 import Nav from '../Nav/Nav';
+import Record from '../Record/Record';
 
 class App extends Component {
   componentDidMount () {
@@ -37,6 +38,11 @@ class App extends Component {
               exact
               path="/standings"
               component={Table}
+            />
+            <Route
+              exact
+              path="/record"
+              component={Record}
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

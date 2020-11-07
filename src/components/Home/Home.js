@@ -7,7 +7,9 @@ class Home extends Component {
   render() {
     return (
       <div className='root'>
-        home page body
+        <div>View Standings</div>
+        <div>Play</div>
+
       </div>
     );
   }

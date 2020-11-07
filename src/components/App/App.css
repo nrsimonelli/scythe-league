@@ -22,50 +22,71 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .container-page {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
 }
 .container-division {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 30vw;
   margin-top: 40px;
+  border: 2px solid black;
+  padding: 5px;
 }
 .division {
-  border: 2px solid yellow;
 }
+
 .division-name {
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
   text-transform: capitalize;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: .05em;
+  font-weight: 800;
 }
+
 .division-header {
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   text-transform: capitalize;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 5px 0px 5px 0px;
+  padding: 3px;
+  font-weight: 600;
 }
+
 .division-data {
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
   display: flex;
   flex-direction: row;
   align-items: right;
   justify-content: space-between;
+  padding: 3px;
 }
-.division-data div{
-  border: 1px solid black;
-}
+
 .player-name {
   width: 150px;
 }
 
-
+/* break points */
+@media (max-width: 749px) {  
+  .container-division {
+    width: 95vw;
+  }
+ 
+}
+@media (min-width: 1199px) {
+  .container-division {
+    width: 22vw;
+  }
+}
