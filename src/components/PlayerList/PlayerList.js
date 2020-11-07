@@ -11,9 +11,9 @@ class PlayerList extends Component {
          this.props.leagueId === x.league_id &&
          (
           <div key={x.id} className='division-data'>
-            <div>{x.name}</div>
-            <div>{x.games_played}</div>
-            <div>{x.points}</div>
+            <div className='player-name'>{x.name}</div>
+            <div className='games-played'>{x.games_played}</div>
+            <div className='points'>{x.points}</div>
           </div>)
        ))}
       </div>

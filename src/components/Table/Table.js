@@ -26,7 +26,6 @@ class Table extends Component {
   render() {
     return (
       <div className='root'>
-        Table page
         <div className='container-page'>
         {/* {JSON.stringify(this.props.league)} */}
           {this.props.league.map(row => (
@@ -36,9 +35,9 @@ class Table extends Component {
                 {row.division}
                 </div>
                 <div className='division-header'>
-                  <div>player</div>
-                  <div>games</div>
-                  <div>points</div>
+                  <div className='player-name'>player</div>
+                  <div className='games-played'>games</div>
+                  <div className='points'>points</div>
                 </div>
               </div>
               <PlayerList leagueId={row.id}/>
