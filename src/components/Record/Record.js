@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 class Record extends Component {
   
@@ -8,29 +13,33 @@ class Record extends Component {
     console.log('record mounted');
     
   }
+  state = {
+    division: '',
+  }
 
-  
+  handleInputChangeFor = propertyName => (event) => {
+    this.setState({
+      [propertyName]: event.target.value,
+    });
+    console.log(this.state);
+  }
   
   render() {
     return (
       <div className='root'>
-        <div className='container-page'>
-        {/* {JSON.stringify(this.props.league)} */}
-          {/* {this.props.league.map(row => (
-            <div key={row.id} className='container-division'>
-              <div className='division'>
-                <div className='division-name'>
-                {row.division}
-                </div>
-                <div className='division-header'>
-                  <div className='player-name'>player</div>
-                  <div className='games-played'>games</div>
-                  <div className='points'>points</div>
-                </div>
-              </div>
-              <PlayerList leagueId={row.id}/>
-            </div>
-          ))} */}
+        <div>
+        <FormControl className='form-control'>
+          <InputLabel id="division">League</InputLabel>
+          <Select
+            id="division-select"
+            value={this.state.division}
+            onChange={this.handleInputChangeFor('division')}
+          >
+            {this.props.league.map((div) => (
+              <MenuItem key={div.id} value={div.division}>{div.division}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
         </div>
       </div>
     );
