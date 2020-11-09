@@ -24,6 +24,29 @@ body {
   flex-wrap: wrap;
   /* border: 2px solid blue; */
 }
+.container-record {
+  border: 2px solid green;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.record-table {
+  display: flex;
+  flex-direction: row;
+}
+.record-header {
+  display: flex;
+  flex-direction: row;
+}
+.record-data {
+  display: flex;
+  flex-direction: row;
+}
+.form-control {
+  width: 100px;
+}
 
 .container-page {
   /* border: 2px solid red; */

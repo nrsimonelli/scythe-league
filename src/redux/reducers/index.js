@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import player from './playerReducer';
 import league from './leagueReducer';
+import game from './gameReducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -11,6 +12,7 @@ import league from './leagueReducer';
 const rootReducer = combineReducers({
   player,
   league,
+  game,
 });
 
 export default rootReducer;
