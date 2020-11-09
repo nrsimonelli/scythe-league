@@ -64,6 +64,13 @@ body {
   border: 2px solid black;
   padding: 5px;
 }
+.container-record-game {
+  /* border: 2px solid green; */
+  width: 90vw;
+  margin-top: 40px;
+  border: 2px solid black;
+  padding: 5px;
+}
 .division {
 }
 
